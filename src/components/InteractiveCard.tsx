@@ -78,7 +78,7 @@ const InteractiveCard: React.FC = () => {
   };
 
   return (
-    <div className="bg-white/90 backdrop-blur-sm border border-secondary/10 rounded-lg p-6 w-full max-w-md shadow-lg transition-all duration-300">
+    <div className="bg-primary/30 backdrop-blur-sm border border-secondary/20 rounded-lg p-6 w-full max-w-md">
       <div className="flex space-x-2 mb-6">
         {Object.keys(cardData).map((section) => (
           <button
@@ -86,8 +86,8 @@ const InteractiveCard: React.FC = () => {
             onClick={() => setActiveSection(section)}
             className={`px-3 py-1 rounded-full text-sm transition-colors ${
               activeSection === section
-                ? 'bg-secondary text-primary shadow-[0_0_15px_0_rgba(0,255,157,0.5)]'
-                : 'bg-transparent text-secondary border border-secondary hover:bg-secondary/10 hover:shadow-[0_0_15px_0_rgba(0,255,157,0.3)]'
+                ? 'bg-secondary text-primary'
+                : 'bg-transparent text-secondary border border-secondary hover:bg-secondary/10'
             }`}
           >
             {section}

@@ -10,12 +10,12 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="px-6 py-8">
-      <h2 className="text-2xl font-bold mb-6 text-softWhite text-center">Contact</h2>
-      <div className="mx-auto">
+    <section id="contact" className="section-container">
+      <h2 className="section-title">Contact</h2>
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
-          <p className="text-lg text-softWhite/80">
-            Let's connect and discuss opportunities.
+          <p className="text-lg text-textSecondary">
+            I'm always open to discussing new opportunities and collaborations.
           </p>
         </div>
         

@@ -10,25 +10,16 @@ import Contact from './sections/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen flex">
-      {/* Main content area (75%) */}
-      <div className="w-[75%] min-h-screen bg-softWhite">
-        <Navbar />
-        <main className="px-8">
-          <Hero />
-          <About />
-          <ExperienceSection />
-          <Skills />
-          <EducationSection />
-        </main>
-      </div>
-      
-      {/* Dark sidebar (25%) */}
-      <div className="w-[25%] min-h-screen bg-darkBg fixed right-0">
-        <div className="h-full flex flex-col justify-center">
-          <Contact />
-        </div>
-      </div>
+    <div className="min-h-screen bg-primary">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <ExperienceSection />
+        <Skills />
+        <EducationSection />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
