@@ -5,11 +5,7 @@ const Hero: React.FC = () => {
   return (
     <section className="min-h-screen flex items-center section-container" id="home">
       <div className="max-w-6xl flex flex-col lg:flex-row items-center gap-8">
-        <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden bg-secondary/10 border-2 border-secondary flex items-center justify-center">
-          {/* This is a placeholder div for the image. Replace src when you have your image */}
-          <div className="text-secondary text-sm">Image Placeholder</div>
-        </div>
-        <div>
+        <div className="flex-1">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-textSecondary">
             Full-Stack Software Engineer
           </h2>
