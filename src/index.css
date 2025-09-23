@@ -21,3 +21,61 @@
     @apply text-3xl sm:text-4xl font-bold mb-8 text-center;
   }
 }
+
+/* Animation utilities */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  opacity: 0;
+  animation-name: fadeUp;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.delay-100 { animation-delay: 100ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-250 { animation-delay: 250ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-350 { animation-delay: 350ms; }
+.delay-400 { animation-delay: 400ms; }
+
+/* Timeline styles for My Journey */
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: rgba(14,165,233,0.12); /* cool blue with low opacity */
+  border-radius: 2px;
+}
+.timeline-item {
+  position: relative;
+  padding: 0.75rem 0 1rem 1.25rem;
+}
+.timeline-dot {
+  position: absolute;
+  /* center the dot on the vertical line (line left is 0.6rem). Dot width is 10px -> subtract half (5px) */
+  left: calc(0.6rem - 5px);
+  top: 0.9rem;
+  width: 10px;
+  height: 10px;
+  background: #0ea5e9; /* secondary (cool blue) */
+  border-radius: 9999px;
+  box-shadow: 0 0 0 4px rgba(14,165,233,0.06);
+  z-index: 10; /* sit above the vertical line */
+}
