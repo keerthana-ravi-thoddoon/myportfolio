@@ -5,12 +5,21 @@ on:
       - master
       - main
 
+# Grant the workflow the minimum required permissions to push to the repo
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # ensure the checkout action uses the GITHUB_TOKEN so later steps can push
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Use Node.js
         uses: actions/setup-node@v4
