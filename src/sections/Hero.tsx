@@ -4,6 +4,42 @@ import { MapPinIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline
 import MediaSlideshow from '../components/MediaSlideshow';
 import SkillsPanel from '../components/SkillsPanel';
 
+// Resolve profile image: prefer importing from `src/assets/...` (module) if you moved the
+// image into the source tree; otherwise fall back to the public folder path.
+// This keeps the code working whether the image lives in `src` or `public`.
+let dp: string;
+try {
+  // Try to require the file from src (works when you place the image under src/assets/...)
+  // eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-unsafe-assignment
+  dp = require('../assets/profile-pic/keerthana.jpg').default;
+} catch (e) {
+  // Fallback to the public folder path
+  // eslint-disable-next-line no-undef
+  dp = `${process.env.PUBLIC_URL || ''}/assets/profile-pic/keerthana.jpg`;
+}
+
+// Helper to resolve arbitrary asset paths (images, videos) used in the slideshow.
+// It will prefer a module import from `src/assets/...` if you moved files into src,
+// otherwise fall back to the public folder path (e.g. /assets/xxx).
+const resolveAsset = (publicPath: string) => {
+  const rel = publicPath.replace(/^\/?assets\//, '');
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-unsafe-return
+    // Attempt to require from src/assets
+    // Note: webpack will return the resolved URL string for these imports
+    // when the file exists under src.
+    // For TypeScript, require(...) may return an object with `default`.
+    // We try to return .default if present, otherwise the require result.
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const mod = require(`../assets/${rel}`);
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    return mod && mod.default ? mod.default : mod;
+  } catch (err) {
+    // Fallback to public path
+    return `${process.env.PUBLIC_URL || ''}/assets/${rel}`;
+  }
+};
+
 const Hero: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('About');
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -176,10 +212,10 @@ const Hero: React.FC = () => {
           {/* Media slideshow showing files from public/assets */}
           <MediaSlideshow
             items={[
-              { type: 'video', src: '/assets/20220513_092711.mp4' },
-              { type: 'image', src: '/assets/20220513_093230.jpg' },
-              { type: 'image', src: '/assets/IMG_1769.JPG' },
-              { type: 'video', src: '/assets/VID-20220509-WA0022.mp4' }
+              { type: 'video', src: resolveAsset('/assets/20220513_092711.mp4') },
+              { type: 'image', src: resolveAsset('/assets/20220513_093230.jpg') },
+              { type: 'image', src: resolveAsset('/assets/IMG_1769.JPG') },
+              { type: 'video', src: resolveAsset('/assets/VID-20220509-WA0022.mp4') }
             ]}
           />
         </div>
@@ -216,7 +252,7 @@ const Hero: React.FC = () => {
         {/* Image placeholder */}
         <div className="w-full bg-secondary/10 rounded-t-lg flex flex-col items-center border-b border-secondary/20 py-4">
           <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-secondary/20 shadow-sm">
-            <img src="/assets/profile-pic/keerthana.jpg" alt="Profile" className="w-full h-full object-cover" />
+            <img src={dp} alt="Keerthana Thoddoon Ravi" className="w-full h-full object-cover" />
           </div>
           <div className="mt-3 text-sm text-textPrimary font-medium">Keerthana Thoddoon Ravi</div>
         </div>
