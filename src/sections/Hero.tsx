@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
+import { MapPinIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import MediaSlideshow from '../components/MediaSlideshow';
 import SkillsPanel from '../components/SkillsPanel';
 
@@ -12,77 +13,145 @@ const Hero: React.FC = () => {
     if (activeTab === 'About') {
       return (
         <div className="text-textSecondary max-w-none">
+          <h3 className="text-xl font-semibold text-textPrimary mb-4">About Me</h3>
+
+          <p className="mb-4">
+            I’m Keerthana Thoddoon Ravi, a full-stack developer with 7+ years of hands-on software development experience and 11+ years overall in IT, supported by a Master’s in Information Systems from Northeastern University.
+          </p>
+
+          <p className="mb-4">
+            My journey began in infrastructure engineering, where I gained a strong foundation in system reliability, automation, and performance optimization. Over the years, I transitioned into software engineering, and today I specialize in Java, Spring Boot, React, and REST APIs, building scalable enterprise applications in the financial services industry.
+          </p>
+
+          <p className="mb-4">
+            I’ve had the privilege of working with organizations like Fidelity Investments and State Street, where I modernized legacy applications, developed reusable microservices, optimized queries, and delivered responsive, user-friendly interfaces that improve customer experience. I thrive in Agile environments, collaborating with product managers, designers, and engineers to transform ideas into production-ready solutions.
+          </p>
+
+          <p className="mb-6">Beyond code, I’m deeply passionate about modernization, scalability, and user experience.</p>
+
+          <h4 className="text-lg font-semibold text-textPrimary mb-2">What I Bring to Your Organization</h4>
+          <ul className="list-disc ml-6 space-y-2">
+            <li>
+              <strong>Technical Expertise:</strong> Proven experience in Java, Spring Boot, React, REST APIs, and cloud platforms, delivering robust enterprise solutions.
+            </li>
+            <li>
+              <strong>Modernization Mindset:</strong> Skilled at transforming legacy applications into modern, maintainable, and scalable systems.
+            </li>
+            <li>
+              <strong>Problem-Solving:</strong> Ability to debug, refactor, and optimize systems for performance and resilience.
+            </li>
+            <li>
+              <strong>Collaboration:</strong> Strong track record of working with cross-functional teams to deliver on business goals.
+            </li>
+            <li>
+              <strong>Continuous Learning:</strong> Enthusiastic about adopting new tools and practices that improve team efficiency.
+            </li>
+            <li>
+              <strong>User Focus:</strong> Committed to building reliable, accessible, and user-friendly products that create real business value.
+            </li>
+          </ul>
+        </div>
+      );
+    }
+
+    if (activeTab === 'Journey') {
+      return (
+        <div className="text-textSecondary max-w-none">
           <div className="timeline">
             {[
               {
-                key: 'wipro',
-                title: '2013–2015 – Wipro (Project Engineer)',
-                body: 'Launched my career at Wipro, gaining hands-on experience with server-side development, incident management, and enterprise-scale systems.'
+                key: 'bsc',
+                title: '2009 – 2012 | Bachelor of Science in IT – Bharathiyar University (India)',
+                body: (
+                  <ul className="list-disc ml-6 mt-2">
+                    <li>Built a foundation in programming, databases, and networking.</li>
+                    <li>Developed an interest in solving real-world problems with software.</li>
+                  </ul>
+                )
               },
               {
-                key: 'transition',
-                title: '2015–2018 – Transition & Learning (U.S.)',
-                body: (<>
-                  <p>After moving to the U.S., I took a career pause due to visa restrictions but used the time to invest in growth:</p>
+                key: 'wipro',
+                title: '2012 – 2015 | Wipro Technologies (Infrastructure Foundations)',
+                body: (
                   <ul className="list-disc ml-6 mt-2">
-                    <li>Completed the AWS Solutions Architect course (Edureka).</li>
-                    <li>Cleared GRE and IELTS with strong scores.</li>
-                    <li>Supported my family while building resilience and persistence.</li>
+                    <li>Started career in enterprise infrastructure, managing VMware servers, CPU utilization, and EMC storage.</li>
+                    <li>Automated patching and incident handling, developing strong problem-solving and scripting skills.</li>
+                    <li>Gained exposure to large-scale IT systems and global delivery models.</li>
                   </ul>
-                </>)
+                )
+              },
+              {
+                key: 'southern',
+                title: '2016 – 2019 | Southern Automation (Automation & SCADA Tools)',
+                body: (
+                  <ul className="list-disc ml-6 mt-2">
+                    <li>Transitioned from infrastructure to software design and automation.</li>
+                    <li>Designed SCADA, MES, and monitoring solutions, working closely with engineers and business teams.</li>
+                    <li>This role solidified my shift toward application development.</li>
+                  </ul>
+                )
               },
               {
                 key: 'northeastern',
-                title: '2019–2021 – Northeastern University, Boston (Master’s in Information Systems)',
-                body: 'Pursued my MS in IS while working part-time at Home Depot to support my education. Despite visa limitations preventing a co-op, the program strengthened my foundations in software engineering, architecture, and system design.'
+                title: '2019 – 2021 | Master of Science in Information Systems – Northeastern University (Boston, MA)',
+                body: (
+                  <ul className="list-disc ml-6 mt-2">
+                    <li>Pursued graduate studies to deepen technical expertise and gain US industry exposure.</li>
+                    <li>Focused on software engineering, cloud computing, and data systems.</li>
+                    <li>Gained hands-on project experience with modern enterprise technologies.</li>
+                  </ul>
+                )
               },
               {
                 key: 'infosys',
-                title: '2021 – Infosys (API Developer, Client: American Express)',
-                body: 'While completing my master’s, I also gained professional experience at Infosys, developing REST APIs with Spring Boot for American Express credit payment systems.'
+                title: '2021 | Infosys – American Express (API Development)',
+                body: (
+                  <ul className="list-disc ml-6 mt-2">
+                    <li>First US role: built secure APIs for online payments.</li>
+                    <li>Ensured compliance, reliability, and monitoring for financial transactions.</li>
+                    <li>Marked the start of my US enterprise development journey.</li>
+                  </ul>
+                )
               },
               {
                 key: 'fidelity',
-                title: '2021–2024 – Fidelity Investments (Full-Stack Developer)',
-                body: 'Contributed to large-scale enterprise applications using Spring Boot, Angular 14, AWS, and Jenkins. Led initiatives to modernize applications, created reusable micro-frontend components with Lit, and integrated services via Apache Camel.'
+                title: '2021 – 2024 | Fidelity Investments (Full-Stack Growth)',
+                body: (
+                  <ul className="list-disc ml-6 mt-2">
+                    <li>Evolved into full-stack engineering with Spring Boot + Angular.</li>
+                    <li>Migrated services to microservices with Apache Camel, enabling reusable data pipelines.</li>
+                    <li>Built micro frontend apps (LIT) for modular UI.</li>
+                    <li>Partnered with UI/UX teams to deliver accessible and responsive features.</li>
+                  </ul>
+                )
               },
               {
                 key: 'state',
-                title: '2024–Present – State Street (via Wipro, Contractor)',
-                body: 'Driving modernization by migrating legacy JSP pages to React (completed 4 screens independently) and leading the full migration of a Struts-based IDF project to Spring Boot. Overcame internal library limitations by analyzing and recommending best-fit alternatives.'
-              },
-              {
-                key: 'drives',
-                title: 'What Drives Me',
-                body: 'I’m passionate about solving complex challenges where no clear blueprint exists. I thrive at the intersection of legacy and modern technologies—building scalable, future-ready applications while continuously learning and mentoring others along the way.'
+                title: '2024 – Present | State Street (Modernization & React Migration)',
+                body: (
+                  <ul className="list-disc ml-6 mt-2">
+                    <li>Leading modernization of legacy apps: JSP → React and Struts → Spring Boot REST APIs.</li>
+                    <li>Rewrote legacy queries with JDBC for performance optimization.</li>
+                    <li>Built modular React components integrated with backend APIs.</li>
+                    <li>Leveraged GitHub Copilot to accelerate development and ensure maintainability.</li>
+                  </ul>
+                )
               }
             ].map((item, idx) => (
               <motion.div
                 key={item.key}
-                className="timeline-item relative"
-                initial={{ opacity: 0, y: 20 }}
+                initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
+                transition={{ duration: 0.45, delay: idx * 0.06 }}
+                viewport={{ once: true, amount: 0.6 }}
+                className="relative pl-10 mb-6"
               >
-                <motion.span
-                  className="timeline-dot"
-                  {...(shouldReduceMotion
-                    ? {
-                        initial: { scale: 1, boxShadow: '0 0 0 0 rgba(0,0,0,0)' },
-                        whileInView: { scale: 1, boxShadow: '0 0 0 0 rgba(0,0,0,0)' },
-                        viewport: { once: true, amount: 0.6 },
-                        transition: { duration: 0 }
-                      }
-                    : {
-                        initial: { scale: 0.9, boxShadow: '0 0 0 0 rgba(20,184,166,0.12)' },
-                        whileInView: { scale: [0.9, 1.2, 1], boxShadow: ['0 0 0 0 rgba(20,184,166,0.06)', '0 0 16px 6px rgba(20,184,166,0.22)', '0 0 8px 3px rgba(20,184,166,0.14)'] },
-                        viewport: { once: true, amount: 0.6 },
-                        transition: { duration: 0.8, ease: 'easeOut', delay: idx * 0.06 }
-                      }
-                  )}
-                  aria-hidden
-                />
+                <span className="timeline-icon absolute left-0 top-1 w-6 h-6 flex items-center justify-center">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="6" fill="currentColor" />
+                  </svg>
+                </span>
+
                 <h4 className="text-lg font-semibold text-textPrimary">{item.title}</h4>
                 <div className="mt-2 text-textSecondary">{item.body}</div>
               </motion.div>
@@ -119,12 +188,13 @@ const Hero: React.FC = () => {
 
     if (activeTab === 'Skills') {
       const groups: Record<string, string[]> = {
-        Frontend: ['React', 'Angular', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
+        Frontend: ['React', 'Angular', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Redux', 'Material UI'],
         Backend: ['Java', 'Spring Boot', 'REST APIs', 'Microservices', 'Apache Camel', 'JDBC'],
-        Databases: ['MySQL', 'MongoDB', 'SQL / PL/SQL'],
-        'DevOps & Tools': ['Jenkins', 'GitHub', 'Bitbucket', 'CircleCI', 'Terraform', 'Swagger', 'JIRA'],
-        Cloud: ['AWS (S3, EC2, Lambda, SNS, SQS, VPC)', 'Azure'],
-        'Testing & Debugging': ['JUnit', 'Mockito', 'Insomnia', 'Postman', 'Splunk']
+        Databases: ['MySQL', 'DB2', 'Snowflake'],
+        'DevOps & Tools': ['Jenkins', 'GitHub', 'Bitbucket', 'CircleCI', 'Terraform', 'Swagger', 'Postman', 'JIRA', 'Docker', 'Kubernetes'],
+        Cloud: ['AWS (S3, EC2, Lambda, SNS, SQS, VPC)'],
+        Testing: ['JUnit', 'Mockito', 'Insomnia'],
+        'Monitoring & Logging': ['Splunk']
       };
 
       return (
@@ -141,61 +211,79 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center gap-8 p-8" id="home">
-      <div className="w-[480px] h-[calc(100vh-4rem)] rounded-lg bg-primary/30 backdrop-blur-sm border border-secondary/20 flex flex-col">
+    <section className="min-h-screen flex items-start gap-8 p-8" id="home">
+  <div className="w-[340px] h-[calc(100vh-4rem)] rounded-lg bg-primary/30 backdrop-blur-sm border border-secondary/20 flex flex-col sticky top-16 self-start">
         {/* Image placeholder */}
-        <div className="w-full h-48 bg-secondary/10 rounded-t-lg flex items-center justify-center border-b border-secondary/20">
-          <div className="w-24 h-24 rounded-full bg-secondary/20 flex items-center justify-center">
-            <span className="text-secondary">Photo</span>
+        <div className="w-full bg-secondary/10 rounded-t-lg flex flex-col items-center border-b border-secondary/20 py-4">
+          <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-secondary/20 shadow-sm">
+            <img src="/assets/profile-pic/keerthana.jpg" alt="Profile" className="w-full h-full object-cover" />
           </div>
+          <div className="mt-3 text-sm text-textPrimary font-medium">Keerthana Thoddoon Ravi</div>
         </div>
-        
-        <div className="flex-1 p-8 flex flex-col justify-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-textSecondary">
-            Full-Stack Software Engineer
+
+  <div className="flex-1 p-5 flex flex-col justify-start space-y-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight mb-0 text-textSecondary">
+            Full Stack Developer
           </h2>
-          <p className="text-lg mb-8 text-textSecondary">
-            Full-stack software engineer with 4+ years of US enterprise development experience at Fidelity and State Street.
-            Specialized in building scalable web applications using React, Spring Boot, and cloud technologies.
-          </p>
-          <div className="flex flex-wrap gap-4">
+          <p className="text-base text-textSecondary/90 mt-1">Building reliable apps at the intersection of tech &amp; product</p>
+          {/* intro paragraph moved to the About tab */}
+          <div className="flex items-center gap-3">
             <a
               href="https://github.com/keerthana-ravi-thoddoon"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-transparent border-2 border-secondary text-secondary px-6 py-3 rounded-lg hover:bg-secondary/10 transition-colors"
+              aria-label="Open GitHub profile in a new tab"
+              className="bg-transparent border-2 border-secondary text-secondary px-4 py-2 rounded-md hover:bg-secondary/10 transition-colors text-base focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
             >
               View My Work
             </a>
             <a
-              href="#contact"
-              className="bg-secondary text-primary px-6 py-3 rounded-lg hover:bg-secondary/90 transition-colors"
+              href="https://www.linkedin.com/in/keerthana-thoddoon-ravi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open LinkedIn profile in a new tab"
+              onClick={() => window.open('https://www.linkedin.com/in/keerthana-thoddoon-ravi/', '_blank')}
+              className="bg-secondary text-primary px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors text-base focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
             >
               Contact Me
             </a>
           </div>
-        </div>
+          <div className="w-full border-t border-secondary/30 mt-4 pt-2" />
+          <div className="mt-1 text-base text-textSecondary/80 w-full flex flex-col divide-y divide-secondary/30">
+            <div className="flex items-center justify-start gap-2 py-1.5 w-full hover:bg-secondary/10 hover:rounded-md hover:translate-x-1 transition-all duration-150" role="note" aria-label="Location">
+              <MapPinIcon className="w-5 h-5 text-secondary" />
+              <span>Boston, MA</span>
+            </div>
+            <div className="flex items-center justify-start gap-2 py-1.5 w-full hover:bg-secondary/10 hover:rounded-md hover:translate-x-1 transition-all duration-150">
+              <PhoneIcon className="w-5 h-5 text-secondary" />
+              <a href="tel:+17812283315" aria-label="Call +1-781-228-3315" className="no-underline">+1-781-228-3315</a>
+            </div>
+            <div className="flex items-center justify-start gap-2 py-1.5 w-full hover:bg-secondary/10 hover:rounded-md hover:translate-x-1 transition-all duration-150">
+              <EnvelopeIcon className="w-5 h-5 text-secondary" />
+              <a href="mailto:keerthanaravislm@gmail.com" aria-label="Email keerthanaravislm@gmail.com" className="no-underline">keerthanaravislm@gmail.com</a>
+            </div>
+          </div>
       </div>
+    </div>
 
       {/* Right card with internal navbar */}
       <div className="flex-1 h-[calc(100vh-4rem)] rounded-lg bg-primary/30 backdrop-blur-sm border border-secondary/20 p-0 flex flex-col overflow-hidden">
         {/* horizontal sticky navbar inside card */}
-          <div className="sticky top-0 bg-primary/30 p-4 border-b border-secondary/10 z-10">
-          <nav className="flex items-center justify-between gap-4">
+          <div className="sticky top-0 bg-primary/30 p-2 border-b border-secondary/10 z-10">
+          <nav role="navigation" aria-label="Hero internal navigation" className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <button onClick={() => setActiveTab('About')} className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium">My Journey</button>
-              <button onClick={() => setActiveTab('Education')} className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium">Education</button>
-              <button onClick={() => setActiveTab('Skills')} className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium">Skills</button>
-              <button onClick={() => setActiveTab('Projects')} className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium">Projects</button>
+              <button onClick={() => setActiveTab('About')} aria-pressed={activeTab === 'About'} aria-label="Show About tab" className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">About</button>
+              <button onClick={() => setActiveTab('Journey')} aria-pressed={activeTab === 'Journey'} aria-label="Show Journey tab" className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">My Journey</button>
+              <button onClick={() => setActiveTab('Education')} aria-pressed={activeTab === 'Education'} aria-label="Show Education tab" className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">Education</button>
+              <button onClick={() => setActiveTab('Skills')} aria-pressed={activeTab === 'Skills'} aria-label="Show Skills tab" className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">Skills</button>
+              {/* Projects tab removed per request */}
             </div>
-            <div>
-              <button onClick={() => setActiveTab('AI')} className="px-4 py-2 rounded-md bg-secondary text-primary font-semibold hover:bg-secondary/90">Try AI assistant</button>
-            </div>
+            {/* AI assistant removed per request */}
           </nav>
         </div>
 
         {/* placeholder main area needs top padding so content isn't hidden under sticky nav */}
-        <div className="flex-1 p-6 overflow-auto bg-primary/5">
+  <div className="flex-1 p-4 overflow-auto bg-primary/5">
           {renderContent()}
         </div>
       </div>
