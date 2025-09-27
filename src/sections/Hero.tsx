@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { MapPinIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
-import MediaSlideshow from '../components/MediaSlideshow';
 import SkillsPanel from '../components/SkillsPanel';
 
-// Static imports for assets moved into src/assets
-import dp from '../assets/profile-pic/keerthana.jpg';
-import video1 from '../assets/vid1.mp4';
-import img1 from '../assets/img1.jpg';
-import video2 from '../assets/img2.jpg';
+// Use public assets so paths work in dev and when deployed (PUBLIC_URL handles repo subpaths)
+const PUBLIC_ASSET = process.env.PUBLIC_URL || '';
+const avatarPic = `${PUBLIC_ASSET}/assets/profile-pic/keerthana.jpg`;
+const graduationImg = `${PUBLIC_ASSET}/assets/profile-pic/graduation.JPG`;
 
 const Hero: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('About');
@@ -179,15 +177,10 @@ const Hero: React.FC = () => {
               <strong>Bachelor of Science in Information Technology</strong> – Bharathiyar University, India (2009 – 2012)
             </li>
           </ul>
-          {/* Media slideshow showing files from public/assets */}
-          <MediaSlideshow
-            items={[
-              { type: 'video', src: video1 },
-              // If you have 20220513_093230.jpg, place it under src/assets and import it above
-              { type: 'image', src: img1 },
-              { type: 'video', src: video2 }
-            ]}
-          />
+          {/* Show a single profile image from public/assets */}
+          <div className="mt-4 flex flex-col sm:flex-row items-start gap-4">
+            <img src={graduationImg} alt="Graduation" className="w-full sm:w-1/2 max-w-sm rounded-md shadow-sm object-cover" />
+          </div>
         </div>
       );
     }
@@ -222,7 +215,7 @@ const Hero: React.FC = () => {
         {/* Image placeholder */}
         <div className="w-full bg-secondary/10 rounded-t-lg flex flex-col items-center border-b border-secondary/20 py-4">
           <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-secondary/20 shadow-sm">
-            <img src={dp} alt="Keerthana Thoddoon Ravi" className="w-full h-full object-cover" />
+            <img src={avatarPic} alt="Keerthana Thoddoon Ravi" className="w-full h-full object-cover" />
           </div>
           <div className="mt-3 text-sm text-textPrimary font-medium">Keerthana Thoddoon Ravi</div>
         </div>
