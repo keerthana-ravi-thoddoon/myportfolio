@@ -6,9 +6,9 @@ import SkillsPanel from '../components/SkillsPanel';
 
 // Static imports for assets moved into src/assets
 import dp from '../assets/profile-pic/keerthana.jpg';
-import video1 from '../assets/20220513_092711.mp4';
-import img1 from '../assets/IMG_1769.jpg';
-import video2 from '../assets/VID-20220509-WA0022.mp4';
+import video1 from '../assets/vid1.mp4';
+import img1 from '../assets/img1.jpg';
+import video2 from '../assets/img2.jpg';
 
 const Hero: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('About');
