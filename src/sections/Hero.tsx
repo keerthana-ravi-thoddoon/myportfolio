@@ -232,7 +232,8 @@ const Hero: React.FC = () => {
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight mb-0 text-textSecondary">
             Full Stack Developer
           </h2>
-          <p className="text-base text-textSecondary/90 mt-1">Building reliable apps at the intersection of tech &amp; product</p>
+          <p className="text-base text-textSecondary/90 mt-1">
+          Transforming complex technology into reliable, product-driven solutions — with a consistent learner’s mindset.</p>
           {/* intro paragraph moved to the About tab */}
           <div className="flex items-center gap-3">
             <a
