@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { MapPinIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { MapPinIcon, PhoneIcon, EnvelopeIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 import SkillsPanel from '../components/SkillsPanel';
 
 // Use public assets so paths work in dev and when deployed (PUBLIC_URL handles repo subpaths)
@@ -65,80 +65,88 @@ const Hero: React.FC = () => {
             {[
               {
                 key: 'bsc',
-                title: '2009 – 2012 | Bachelor of Science in IT – Bharathiyar University (India)',
+                title: "2009 – 2012 | Bachelor of Science in Information Technology – Dr. G.R. Damodaran College of Arts and Science (Affiliated to Bharathiar University, India)",
                 body: (
-                  <ul className="list-disc ml-6 mt-2">
-                    <li>Built a foundation in programming, databases, and networking.</li>
-                    <li>Developed an interest in solving real-world problems with software.</li>
-                  </ul>
+                  <div className="mt-2 text-textSecondary">
+                    <p>Built a foundation in programming, databases, and networking.</p>
+                    <p>Developed an early interest in solving real-world problems with software.</p>
+                  </div>
                 )
               },
               {
                 key: 'wipro',
-                title: '2012 – 2015 | Wipro Technologies (Infrastructure Foundations)',
+                title: '2012 – 2015 | Wipro Technologies (Infrastructure Foundations) – India',
                 body: (
-                  <ul className="list-disc ml-6 mt-2">
-                    <li>Started career in enterprise infrastructure, managing VMware servers, CPU utilization, and EMC storage.</li>
-                    <li>Automated patching and incident handling, developing strong problem-solving and scripting skills.</li>
-                    <li>Gained exposure to large-scale IT systems and global delivery models.</li>
-                  </ul>
+                  <div className="mt-2 text-textSecondary">
+                    <p>Began career in enterprise infrastructure, managing VMware servers, CPU utilization, and EMC storage.</p>
+                    <p>Automated patching and incident handling through scripting, which built strong problem-solving skills. Gained exposure to large-scale IT systems and global delivery models.</p>
+                  </div>
                 )
               },
               {
-                key: 'southern',
-                title: '2016 – 2019 | Southern Automation (Automation & SCADA Tools)',
+                key: 'transition',
+                title: '2015 – 2019 | Transition & Upskilling – U.S.',
                 body: (
-                  <ul className="list-disc ml-6 mt-2">
-                    <li>Transitioned from infrastructure to software design and automation.</li>
-                    <li>Designed SCADA, MES, and monitoring solutions, working closely with engineers and business teams.</li>
-                    <li>This role solidified my shift toward application development.</li>
-                  </ul>
+                  <div className="mt-2 text-textSecondary">
+                    <p>Moved to the U.S. in 2015 and focused on settling and securing work authorization. During this period:</p>
+                    <ul className="list-disc ml-6 mt-2">
+                      <li>Completed AWS Solutions Architect certification (2017, Edureka).</li>
+                      <li>Prepared for graduate studies by completing GRE and IELTS.</li>
+                      <li>Explored software development through self-study and projects, shaping the decision to pursue a master’s program.</li>
+                    </ul>
+                  </div>
                 )
               },
               {
                 key: 'northeastern',
-                title: '2019 – 2021 | Master of Science in Information Systems – Northeastern University (Boston, MA)',
+                title: '2019 – 2021 | Master of Science in Information Systems – Northeastern University (Boston, MA, U.S.)',
                 body: (
-                  <ul className="list-disc ml-6 mt-2">
-                    <li>Pursued graduate studies to deepen technical expertise and gain US industry exposure.</li>
-                    <li>Focused on software engineering, cloud computing, and data systems.</li>
-                    <li>Gained hands-on project experience with modern enterprise technologies.</li>
-                  </ul>
+                  <div className="mt-2 text-textSecondary">
+                    <p>Pursued graduate studies to deepen technical expertise and gain U.S. industry exposure. Focused on software engineering, cloud computing, and data systems.</p>
+                    <p>Gained hands-on project experience with modern enterprise technologies.</p>
+                  </div>
                 )
               },
               {
                 key: 'infosys',
-                title: '2021 | Infosys – American Express (API Development)',
+                title: '2021 | Infosys – American Express (API Development) – Remote, U.S.',
                 body: (
-                  <ul className="list-disc ml-6 mt-2">
-                    <li>First US role: built secure APIs for online payments.</li>
-                    <li>Ensured compliance, reliability, and monitoring for financial transactions.</li>
-                    <li>Marked the start of my US enterprise development journey.</li>
-                  </ul>
+                  <div className="mt-2 text-textSecondary">
+                    <p>First U.S. professional role: built secure APIs for online payments. Ensured compliance, reliability, and monitoring for financial transactions. This marked the start of enterprise software development in the U.S.</p>
+                  </div>
                 )
               },
               {
                 key: 'fidelity',
-                title: '2021 – 2024 | Fidelity Investments (Full-Stack Growth)',
+                title: '2021 – 2024 | Fidelity Investments (Full-Stack Growth) – Rhode Island, U.S.',
                 body: (
-                  <ul className="list-disc ml-6 mt-2">
-                    <li>Evolved into full-stack engineering with Spring Boot + Angular.</li>
-                    <li>Migrated services to microservices with Apache Camel, enabling reusable data pipelines.</li>
-                    <li>Built micro frontend apps (LIT) for modular UI.</li>
-                    <li>Partnered with UI/UX teams to deliver accessible and responsive features.</li>
-                  </ul>
+                  <div className="mt-2 text-textSecondary">
+                    <p>Advanced into full-stack engineering, modernizing critical financial applications and improving system reliability:</p>
+                    <ul className="list-disc ml-6 mt-2">
+                      <li>Developed and maintained Spring Boot + Angular applications, delivering secure, responsive, and user-friendly features.</li>
+                      <li>Migrated services to microservices architecture with Apache Camel, enabling reusable data pipelines and improving scalability.</li>
+                      <li>Built micro frontend apps (LIT framework) to support modular UI deployment and cross-team collaboration.</li>
+                      <li>Partnered with UI/UX teams to deliver accessible and responsive interfaces aligned with enterprise design standards.</li>
+                      <li>Integrated Splunk for logging, monitoring, and debugging analysis, reducing mean time to resolution (MTTR) for production issues and improving system observability.</li>
+                    </ul>
+                  </div>
                 )
               },
               {
                 key: 'state',
-                title: '2024 – Present | State Street (Modernization & React Migration)',
+                title: '2024 – Present | State Street (Modernization & React Migration) – Boston, U.S.',
                 body: (
-                  <ul className="list-disc ml-6 mt-2">
-                    <li>Leading modernization of legacy apps: JSP → React and Struts → Spring Boot REST APIs.</li>
-                    <li>Rewrote legacy queries with JDBC for performance optimization.</li>
-                    <li>Built modular React components integrated with backend APIs.</li>
-                    <li>Leveraged GitHub Copilot to accelerate development and ensure maintainability.</li>
-                  </ul>
+                  <div className="mt-2 text-textSecondary">
+                    <p>Leading enterprise application modernization and observability improvements:</p>
+                    <ul className="list-disc ml-6 mt-2">
+                      <li>Led migration of legacy JSP applications to modular React UIs and Struts services to Spring Boot REST APIs, improving scalability and reducing technical debt.</li>
+                      <li>Optimized legacy JDBC queries, cutting response times by up to 40% and enhancing performance for high-volume financial transactions.</li>
+                      <li>Designed and delivered reusable React component libraries, enabling faster feature rollout and consistent UI/UX across applications.</li>
+                      <li>Implemented Splunk dashboards and log analysis for proactive monitoring and debugging, reducing incident resolution time and improving system reliability.</li>
+                      <li>Mentored junior developers through application knowledge transfer (KT) sessions, strengthening team capability and ensuring smooth onboarding.</li>
+                      <li>Leveraged AI-assisted development (GitHub Copilot) to accelerate delivery timelines while maintaining high code quality and long-term maintainability.</li>
+                    </ul>
+                  </div>
                 )
               }
             ].map((item, idx) => (
@@ -261,6 +269,18 @@ const Hero: React.FC = () => {
               <EnvelopeIcon className="w-5 h-5 text-secondary" />
               <a href="mailto:keerthanaravislm@gmail.com" aria-label="Email keerthanaravislm@gmail.com" className="no-underline">keerthanaravislm@gmail.com</a>
             </div>
+            <div className="flex items-center justify-start gap-2 py-1.5 w-full">
+              <ShieldCheckIcon className="w-5 h-5 text-secondary" />
+              <a
+                href="https://www.edureka.co/my-certificate/5cda32f1a3c29e008fb76a9e92ffa3dc"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open AWS Solutions Architect certificate in a new tab"
+                className="text-sm text-secondary hover:underline focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+              >
+                AWS solution architect
+              </a>
+            </div>
           </div>
       </div>
     </div>
@@ -272,7 +292,7 @@ const Hero: React.FC = () => {
           <nav role="navigation" aria-label="Hero internal navigation" className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <button onClick={() => setActiveTab('About')} aria-pressed={activeTab === 'About'} aria-label="Show About tab" className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">About</button>
-              <button onClick={() => setActiveTab('Journey')} aria-pressed={activeTab === 'Journey'} aria-label="Show Journey tab" className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">My Journey</button>
+              <button onClick={() => setActiveTab('Journey')} aria-pressed={activeTab === 'Journey'} aria-label="Show Journey tab" className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">Career Journey</button>
               <button onClick={() => setActiveTab('Education')} aria-pressed={activeTab === 'Education'} aria-label="Show Education tab" className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">Education</button>
               <button onClick={() => setActiveTab('Skills')} aria-pressed={activeTab === 'Skills'} aria-label="Show Skills tab" className="px-4 py-2 rounded-md hover:bg-secondary/10 text-textSecondary font-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">Skills</button>
               {/* Projects tab removed per request */}
