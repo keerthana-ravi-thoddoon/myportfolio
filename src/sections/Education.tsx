@@ -12,13 +12,13 @@ const educationList: Education[] = [
     degree: "Master of Science in Information Systems",
     school: "Northeastern University",
     location: "Boston, MA",
-    period: "2019 – 2021"
+    period: "Sep, 2019 – Dec, 2021"
   },
   {
     degree: "Bachelor of Science in Information Technology",
     school: "Bharathiyar University",
     location: "India",
-    period: "2009 – 2012"
+    period: "June, 2009 – May, 2012"
   }
 ];
 

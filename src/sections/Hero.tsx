@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { MapPinIcon, PhoneIcon, EnvelopeIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
+import { MapPinIcon, PhoneIcon, EnvelopeIcon, ShieldCheckIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import SkillsPanel from '../components/SkillsPanel';
 
 // Use public assets so paths work in dev and when deployed (PUBLIC_URL handles repo subpaths)
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
           <h3 className="text-xl font-semibold text-textPrimary mb-4">About Me</h3>
 
           <p className="mb-4">
-            I’m Keerthana Thoddoon Ravi, a full-stack developer with 7+ years of hands-on software development experience and 11+ years overall in IT, supported by a Master’s in Information Systems from Northeastern University.
+            I’m Keerthana Thoddoon Ravi, a full-stack developer with 8+ years of software development and modernization experience, supported by a Master’s in Information Systems from Northeastern University.
           </p>
 
           <p className="mb-4">
@@ -99,7 +99,11 @@ const Hero: React.FC = () => {
               },
               {
                 key: 'northeastern',
-                title: '2019 – 2021 | Master of Science in Information Systems – Northeastern University (Boston, MA, U.S.)',
+                title: (
+                  <>
+                    2019 – 2021 | Master of Science in Information Systems – <a href="https://cos.northeastern.edu/admissions/graduate-programs/masters-programs/" target="_blank" rel="noopener noreferrer" aria-label="Open Northeastern College of Science graduate programs in a new tab" className="inline-flex items-center gap-1 text-secondary hover:underline focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">Northeastern University <ArrowTopRightOnSquareIcon className="w-4 h-4 text-secondary" aria-hidden="true"/></a> (Boston, MA, U.S.)
+                  </>
+                ),
                 body: (
                   <div className="mt-2 text-textSecondary">
                     <p>Pursued graduate studies to deepen technical expertise and gain U.S. industry exposure. Focused on software engineering, cloud computing, and data systems.</p>
@@ -139,7 +143,7 @@ const Hero: React.FC = () => {
                   <div className="mt-2 text-textSecondary">
                     <p>Leading enterprise application modernization and observability improvements:</p>
                     <ul className="list-disc ml-6 mt-2">
-                      <li>Led migration of legacy JSP applications to modular React UIs and Struts services to Spring Boot REST APIs, improving scalability and reducing technical debt.</li>
+                      <li>Led migration of legacy applications to modular React UIs and Struts services to Spring Boot REST APIs, improving scalability and reducing technical debt.</li>
                       <li>Optimized legacy JDBC queries, cutting response times by up to 40% and enhancing performance for high-volume financial transactions.</li>
                       <li>Designed and delivered reusable React component libraries, enabling faster feature rollout and consistent UI/UX across applications.</li>
                       <li>Implemented Splunk dashboards and log analysis for proactive monitoring and debugging, reducing incident resolution time and improving system reliability.</li>
@@ -179,10 +183,20 @@ const Hero: React.FC = () => {
           <h3 className="text-xl font-semibold text-textPrimary mb-4">Education</h3>
           <ul className="list-disc ml-6 space-y-3">
             <li>
-              <strong>Master of Science in Information Systems</strong> – Northeastern University, Boston, MA (2019 – 2021)
+              <strong>Master of Science in Information Systems</strong> –{' '}
+              <a
+                href="https://cos.northeastern.edu/admissions/graduate-programs/masters-programs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Northeastern College of Science graduate programs in a new tab"
+                className="inline-flex items-center gap-1 text-secondary hover:underline focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+              >
+                Northeastern University <ArrowTopRightOnSquareIcon className="w-4 h-4 text-secondary" aria-hidden="true"/>
+              </a>
+              , Boston, MA (Sep, 2019 – Dec, 2021)
             </li>
             <li>
-              <strong>Bachelor of Science in Information Technology</strong> – Bharathiyar University, India (2009 – 2012)
+              <strong>Bachelor of Science in Information Technology</strong> – <a href="https://www.grd.org/grdcs/" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. G. R. Damodaran College website in a new tab" className="inline-flex items-center gap-1 text-secondary hover:underline focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">Dr. G. R. Damodaran College Of Arts & Science <ArrowTopRightOnSquareIcon className="w-4 h-4 text-secondary" aria-hidden="true"/></a>, India (June, 2009 – May, 2012)
             </li>
           </ul>
           {/* Show a single profile image from public/assets */}
