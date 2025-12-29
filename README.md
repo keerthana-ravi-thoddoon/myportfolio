@@ -141,7 +141,7 @@ Full-stack software engineer with 4+ years of US enterprise development experien
 
 ## 📫 Contact
 
-- Email: keerthanaravislm@gmail.com
+- Email: keerthana.tr.work@gmail.com
 - GitHub: [keerthana-ravi-thoddoon](https://github.com/keerthana-ravi-thoddoon)
 - LinkedIn: [keerthana-thoddoon-ravi](https://www.linkedin.com/in/keerthana-thoddoon-ravi)
 

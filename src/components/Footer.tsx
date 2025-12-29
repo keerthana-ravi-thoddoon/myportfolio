@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               LinkedIn
             </a>
             <a
-              href="mailto:keerthanaravislm@gmail.com"
+              href="mailto:keerthana.tr.work@gmail.com"
               className="text-textSecondary hover:text-secondary transition-colors"
             >
               Email

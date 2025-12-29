@@ -4,7 +4,7 @@ const Contact: React.FC = () => {
   const contactInfo = {
     location: "Boston, MA",
     phone: "+1-781-228-3315",
-    email: "keerthanaravislm@gmail.com",
+    email: "keerthana.tr.work@gmail.com",
     github: "https://github.com/keerthana-ravi-thoddoon",
     linkedin: "https://www.linkedin.com/in/keerthana-thoddoon-ravi"
   };

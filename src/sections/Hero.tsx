@@ -282,7 +282,7 @@ const Hero: React.FC = () => {
             </div>
             <div className="flex items-center justify-start gap-2 py-1.5 w-full hover:bg-secondary/10 hover:rounded-md hover:translate-x-1 transition-all duration-150">
               <EnvelopeIcon className="w-5 h-5 text-secondary" />
-              <a href="mailto:keerthanaravislm@gmail.com" aria-label="Email keerthanaravislm@gmail.com" className="no-underline">keerthanaravislm@gmail.com</a>
+              <a href="mailto:keerthana.tr.work@gmail.com" aria-label="Email keerthana.tr.work@gmail.com" className="no-underline">keerthana.tr.work@gmail.com</a>
             </div>
             <div className="flex items-center justify-start gap-2 py-1.5 w-full">
               <ShieldCheckIcon className="w-5 h-5 text-secondary" />
