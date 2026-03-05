@@ -60,102 +60,102 @@ const Hero: React.FC = () => {
 
     if (activeTab === 'Journey') {
       return (
-        <div className="text-textSecondary max-w-none">
-          <h3 className="text-xl font-semibold text-textPrimary mb-4">Career Journey</h3>
-          <div className="space-y-6">
-            <div>
-              <h4 className="text-lg font-semibold text-textPrimary">2009 – 2012 | Bachelor of Science in Information Technology</h4>
-              <div className="mt-2 text-textSecondary">
-                <p><strong>Dr. G.R. Damodaran College of Arts and Science – India</strong></p>
-                <p className="mt-2">Built a strong foundation in programming, databases, and networking. This is where my interest in solving real-world problems through software began.</p>
-              </div>
-            </div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-textSecondary max-w-none">
+           <h3 className="text-xl font-semibold text-textPrimary mb-4">Career Journey</h3>
+           <div className="space-y-6">
+             <div>
+               <h4 className="text-lg font-semibold text-textPrimary">2009 – 2012 | Bachelor of Science in Information Technology</h4>
+               <div className="mt-2 text-textSecondary">
+                 <p><strong>Dr. G.R. Damodaran College of Arts and Science – India</strong></p>
+                 <p className="mt-2">Built a strong foundation in programming, databases, and networking. This is where my interest in solving real-world problems through software began.</p>
+               </div>
+             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-textPrimary">Early Career</h4>
-              <div className="mt-2 text-textSecondary">
-                <h5 className="font-medium"><strong>2012 – 2015 | Wipro Technologies – Infrastructure Foundations</strong></h5>
-                <p className="mt-2">Started my career supporting enterprise infrastructure environments including VMware servers and EMC storage systems.</p>
-                <p className="mt-2">Worked on system monitoring, automation of patching tasks, and incident troubleshooting. This experience helped me understand how large-scale enterprise systems operate and the importance of reliability in production environments.</p>
-              </div>
-            </div>
+             <div>
+               <h4 className="text-lg font-semibold text-textPrimary">Early Career</h4>
+               <div className="mt-2 text-textSecondary">
+                 <h5 className="font-medium"><strong>2012 – 2015 | Wipro Technologies – Infrastructure Foundations</strong></h5>
+                 <p className="mt-2">Started my career supporting enterprise infrastructure environments including VMware servers and EMC storage systems.</p>
+                 <p className="mt-2">Worked on system monitoring, automation of patching tasks, and incident troubleshooting. This experience helped me understand how large-scale enterprise systems operate and the importance of reliability in production environments.</p>
+               </div>
+             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-textPrimary">Application Support & Analysis</h4>
-              <div className="mt-2 text-textSecondary">
-                <h5 className="font-medium"><strong>2016 – 2019 | Southern Automation and Electrical Solutions Pvt Ltd – Remote</strong></h5>
-                <p className="mt-2">Worked as a Technical Analyst supporting internal applications used for procurement and purchase order management.</p>
-                <p className="mt-2">Key responsibilities included:</p>
-                <ul className="list-disc ml-6 mt-2 space-y-1">
-                  <li>Monitoring application behavior and investigating issues affecting order workflows.</li>
-                  <li>Analyzing logs and assisting developers in debugging production and testing issues.</li>
-                  <li>Supporting enhancements to internal applications built using Java and JSP.</li>
-                  <li>Creating basic dashboards using MySQL to track order status and identify delays.</li>
-                  <li>Working with procurement stakeholders to understand requirements and document system improvements.</li>
-                </ul>
-                <p className="mt-2">This role provided hands-on experience with enterprise applications and strengthened my problem-solving and debugging skills.</p>
-              </div>
-            </div>
+             <div>
+               <h4 className="text-lg font-semibold text-textPrimary">Application Support & Analysis</h4>
+               <div className="mt-2 text-textSecondary">
+                 <h5 className="font-medium"><strong>2016 – 2019 | Southern Automation and Electrical Solutions Pvt Ltd – Remote</strong></h5>
+                 <p className="mt-2">Worked as a Technical Analyst supporting internal applications used for procurement and purchase order management.</p>
+                 <p className="mt-2">Key responsibilities included:</p>
+                 <ul className="list-disc ml-6 mt-2 space-y-1">
+                   <li>Monitoring application behavior and investigating issues affecting order workflows.</li>
+                   <li>Analyzing logs and assisting developers in debugging production and testing issues.</li>
+                   <li>Supporting enhancements to internal applications built using Java and JSP.</li>
+                   <li>Creating basic dashboards using MySQL to track order status and identify delays.</li>
+                   <li>Working with procurement stakeholders to understand requirements and document system improvements.</li>
+                 </ul>
+                 <p className="mt-2">This role provided hands-on experience with enterprise applications and strengthened my problem-solving and debugging skills.</p>
+               </div>
+             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-textPrimary">Graduate Studies</h4>
-              <div className="mt-2 text-textSecondary">
-                <h5 className="font-medium"><strong>2019 – 2021 | Master of Science in Information Systems</strong></h5>
-                <p className="mt-1"><strong>Northeastern University – Boston, MA</strong></p>
-                <p className="mt-2">Pursued graduate studies to deepen expertise in software engineering, cloud computing, and enterprise systems. Worked on projects focused on backend services, data systems, and modern application architectures used in industry.</p>
-              </div>
-            </div>
+             <div>
+               <h4 className="text-lg font-semibold text-textPrimary">Graduate Studies</h4>
+               <div className="mt-2 text-textSecondary">
+                 <h5 className="font-medium"><strong>2019 – 2021 | Master of Science in Information Systems</strong></h5>
+                 <p className="mt-1"><strong>Northeastern University – Boston, MA</strong></p>
+                 <p className="mt-2">Pursued graduate studies to deepen expertise in software engineering, cloud computing, and enterprise systems. Worked on projects focused on backend services, data systems, and modern application architectures used in industry.</p>
+               </div>
+             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-textPrimary">Enterprise Software Development</h4>
-              <div className="mt-2 text-textSecondary">
-                <h5 className="font-medium"><strong>2021 | Infosys – American Express (API Development)</strong></h5>
-                <p className="mt-2">Began working on enterprise financial systems, developing secure backend APIs for online payment workflows. Focused on reliability, compliance, and monitoring for transaction systems used in large-scale financial environments.</p>
+             <div>
+               <h4 className="text-lg font-semibold text-textPrimary">Enterprise Software Development</h4>
+               <div className="mt-2 text-textSecondary">
+                 <h5 className="font-medium"><strong>2021 | Infosys – American Express (API Development)</strong></h5>
+                 <p className="mt-2">Began working on enterprise financial systems, developing secure backend APIs for online payment workflows. Focused on reliability, compliance, and monitoring for transaction systems used in large-scale financial environments.</p>
 
-                <h5 className="font-medium mt-4"><strong>2021 – 2024 | Fidelity Investments</strong></h5>
-                <p className="mt-2">Grew into a full-stack engineering role contributing to enterprise financial platforms.</p>
-                <p className="mt-2">Key contributions included:</p>
-                <ul className="list-disc ml-6 mt-2 space-y-1">
-                  <li>Building full-stack applications using Spring Boot and Angular.</li>
-                  <li>Developing REST APIs for backend services.</li>
-                  <li>Implementing microservices integrations using Apache Camel.</li>
-                  <li>Creating micro-frontend applications for modular UI deployment.</li>
-                  <li>Improving system observability using Splunk monitoring and logging.</li>
-                </ul>
-                <p className="mt-2">This experience strengthened expertise in enterprise architecture, scalable systems, and production reliability.</p>
+                 <h5 className="font-medium mt-4"><strong>2021 – 2024 | Fidelity Investments</strong></h5>
+                 <p className="mt-2">Grew into a full-stack engineering role contributing to enterprise financial platforms.</p>
+                 <p className="mt-2">Key contributions included:</p>
+                 <ul className="list-disc ml-6 mt-2 space-y-1">
+                   <li>Building full-stack applications using Spring Boot and Angular.</li>
+                   <li>Developing REST APIs for backend services.</li>
+                   <li>Implementing microservices integrations using Apache Camel.</li>
+                   <li>Creating micro-frontend applications for modular UI deployment.</li>
+                   <li>Improving system observability using Splunk monitoring and logging.</li>
+                 </ul>
+                 <p className="mt-2">This experience strengthened expertise in enterprise architecture, scalable systems, and production reliability.</p>
 
-                <h5 className="font-medium mt-4"><strong>2024 – Present | State Street</strong></h5>
-                <p className="mt-2">Currently working on modernization of large enterprise financial applications.</p>
-                <p className="mt-2">Key work includes:</p>
-                <ul className="list-disc ml-6 mt-2 space-y-1">
-                  <li>Migrating legacy systems to React frontends and Spring Boot microservices.</li>
-                  <li>Improving performance of legacy systems and optimizing database queries.</li>
-                  <li>Designing reusable React component libraries used across internal applications.</li>
-                  <li>Implementing observability and monitoring using Splunk dashboards.</li>
-                </ul>
-                <p className="mt-2">This work focuses on modernizing legacy enterprise systems into scalable, maintainable architectures.</p>
-              </div>
-            </div>
+                 <h5 className="font-medium mt-4"><strong>2024 – Present | State Street</strong></h5>
+                 <p className="mt-2">Currently working on modernization of large enterprise financial applications.</p>
+                 <p className="mt-2">Key work includes:</p>
+                 <ul className="list-disc ml-6 mt-2 space-y-1">
+                   <li>Migrating legacy systems to React frontends and Spring Boot microservices.</li>
+                   <li>Improving performance of legacy systems and optimizing database queries.</li>
+                   <li>Designing reusable React component libraries used across internal applications.</li>
+                   <li>Implementing observability and monitoring using Splunk dashboards.</li>
+                 </ul>
+                 <p className="mt-2">This work focuses on modernizing legacy enterprise systems into scalable, maintainable architectures.</p>
+               </div>
+             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-textPrimary">Core Focus</h4>
-              <div className="mt-2 text-textSecondary">
-                <p>My work focuses on building and modernizing enterprise applications using:</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>React</li>
-                  <li>Java</li>
-                  <li>Spring Boot</li>
-                  <li>Microservices</li>
-                  <li>Cloud and Observability tools</li>
-                </ul>
-                <p className="mt-2">Much of my experience is in financial systems, where reliability, scalability, and performance are critical.</p>
-              </div>
-            </div>
+             <div>
+               <h4 className="text-lg font-semibold text-textPrimary">Core Focus</h4>
+               <div className="mt-2 text-textSecondary">
+                 <p>My work focuses on building and modernizing enterprise applications using:</p>
+                 <ul className="list-disc ml-6 mt-2">
+                   <li>React</li>
+                   <li>Java</li>
+                   <li>Spring Boot</li>
+                   <li>Microservices</li>
+                   <li>Cloud and Observability tools</li>
+                 </ul>
+                 <p className="mt-2">Much of my experience is in financial systems, where reliability, scalability, and performance are critical.</p>
+               </div>
+             </div>
 
-          </div>
-        </div>
-      );
-    }
+           </div>
+         </motion.div>
+       );
+     }
 
     if (activeTab === 'Education') {
       return (
