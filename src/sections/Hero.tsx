@@ -80,23 +80,35 @@ const Hero: React.FC = () => {
                </div>
              </div>
 
-             <div>
-               <h4 className="text-lg font-semibold text-textPrimary">Application Support & Analysis</h4>
-               <div className="mt-2 text-textSecondary">
-                 <h5 className="font-medium"><strong>2016 – 2019 | Southern Automation and Electrical Solutions Pvt Ltd – Remote</strong></h5>
-                 <p className="mt-2">Worked as a Technical Analyst supporting internal applications used for procurement and purchase order management.</p>
-                 <p className="mt-2">Key responsibilities included:</p>
-                 <ul className="list-disc ml-6 mt-2 space-y-1">
-                   <li>Monitoring application behavior and investigating issues affecting order workflows.</li>
-                   <li>Analyzing logs and assisting developers in debugging production and testing issues.</li>
-                   <li>Supporting enhancements to internal applications built using Java and JSP.</li>
-                   <li>Creating basic dashboards using MySQL to track order status and identify delays.</li>
-                   <li>Working with procurement stakeholders to understand requirements and document system improvements.</li>
-                 </ul>
-                 <p className="mt-2">This role provided hands-on experience with enterprise applications and strengthened my problem-solving and debugging skills.</p>
-               </div>
-             </div>
+              <div>
+                <h4 className="text-lg font-semibold text-textPrimary">Application Support & Analysis</h4>
+                <div className="mt-2 text-textSecondary">
+                  <h5 className="font-medium">
+                    <strong> Career Transition and Challenges </strong>
+                  </h5>
 
+                  <p className="mt-2">
+                    After relocating to the United States, I stayed engaged technically through a remote volunteer
+                    Technical Analyst role supporting internal procurement and purchase order management
+                    applications.
+                  </p>
+
+                  <p className="mt-2">
+                    In this role, I monitored application workflows, investigated production and testing issues,
+                    analyzed logs, supported debugging efforts, and contributed to basic enhancements in
+                    Java and JSP-based internal tools. I also created simple MySQL dashboards to track order
+                    status and identify delays, while working with stakeholders to understand system improvement needs.
+                  </p>
+
+                  <p className="mt-2">
+                    This experience strengthened my interest in backend systems, APIs, debugging, and cloud
+                    technologies. During this period, I also completed AWS Solutions Architect training, which
+                    later supported my decision to pursue a Master's in Information Systems at Northeastern
+                    University and transition fully into software engineering roles.
+                  </p>
+                </div>
+              </div>
+             
              <div>
                <h4 className="text-lg font-semibold text-textPrimary">Graduate Studies</h4>
                <div className="mt-2 text-textSecondary">

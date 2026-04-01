@@ -10,7 +10,7 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "Software Engineer (Contract via Wipro)",
+    title: "Technical Lead | Wipro Technologies (Client: State Street)",
     company: "State Street",
     location: "Boston, MA",
     period: "Oct 2024 – Present",
